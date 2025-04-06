@@ -14,5 +14,5 @@ S -> C : u8(authorized)||(u16(|secret|)||secret||u16(|nonce|)||nonce)
 
 The identifier will be unique to the user encoded as a UTF-8 string, secret and nonce are UTF-8 encoded strings, |x| is the length of a byte array x, u8(.) is a single byte. u16(.) encodes an integer x as two big-endian bytes, and || is concatenation.
 
-After the client sends its ID, the server will check whether the sending IP address is authorized to use the service. If so, it will return a non-zero value for authorized as well as a secret and nonce. Otherwise, it will return authorized = 0 and no secret.
+After the client sends its ID, the server will check whether the sending IP address is authorized to use the service. If so, it will return a non-zero value for authorized as well as a secret and nonce. Otherwise, it will return authorized = 0 and no secret. 
 
